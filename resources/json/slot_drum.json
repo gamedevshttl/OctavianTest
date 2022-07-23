@@ -1,0 +1,9 @@
+{
+    "slot_offset":{
+        "x":0,
+        "y":80
+    },
+    "slot_quantity":5,
+    "control_level":3,
+    "delay_stop":300
+}
