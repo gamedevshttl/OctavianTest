@@ -6,6 +6,7 @@ SDL helpers
 
 
 Система виджетов.\
+![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Widget%20Class%20Diagramm.JPG)\
 Базовый класс виджет (Widget). Содержит контейнер указалелей на дочерние виджеты(на самого же себя), и содержит данные о позиции.\
 В функциях update, render и touch в цикле проходит все дочерние виджеты и вызывает у них эти же фунции.\
 \
@@ -33,3 +34,10 @@ SDL helpers
 Класс Слот (Slot). Наследник виджета.\
 Содержит объект класса Label. В функции update выполняется вертиакльное перемещение слота в соответствии со скоростью. 
 При достижении нижний границы барабана, слот перемещается на верхнюю границу. 
+\
+\
+Классы виджетов в описании барабана\
+![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Drum%20description.JPG)
+
+Диаграмма последовательности\
+![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Process%20diagram.JPG)
