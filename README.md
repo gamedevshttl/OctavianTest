@@ -1,14 +1,14 @@
 # OctavianTest
 
-Для сборки проекта нужны библиотеки SDL http://libsdl.org/download-2.0.php (SDL2, SDL2_image, SDL2_ttf) \
+Для сборки проекта нужны библиотеки SDL http://libsdl.org/download-2.0.php (SDL2, SDL2_image, SDL2_ttf)
+
+## Система виджетов
+![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Widget%20Class%20Diagramm.JPG)\
 
 SDL helpers
 Класс Text - создает текст средствами SDL\
 Класс Texture - создает текстуру средствами SDL
 
-
-## Система виджетов
-![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Widget%20Class%20Diagramm.JPG)\
 Базовый класс виджет (Widget). Содержит контейнер указателей на дочерние виджеты, и содержит данные о позиции.\
 В функциях update, render и touch в цикле проходит все дочерние виджеты и вызывает у них эти же фунции.\
 \
