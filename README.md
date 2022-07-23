@@ -43,7 +43,7 @@ SDL helpers
 Классы виджетов в описании барабана\
 ![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Drum%20description.JPG)
 \
-Диаграмма класов
+Диаграмма класов\
 ![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Drum%20class%20diagramm.JPG)
 \
 Диаграмма последовательности\
