@@ -2,8 +2,8 @@
     "bg_image":"../resources/image/ball_blue_large.png",
     "play_button":{
         "position":{
-            "x":375,
-            "y":500
+            "x":325,
+            "y":450
         },
         "image":"../resources/image/red_button.png",
         "shine_image":"../resources/image/shine_button.png",
