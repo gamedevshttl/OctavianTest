@@ -78,7 +78,10 @@ void Button::touch(int x, int y, Uint32 type)
 	point.x = x;
 	point.y = y;
 	if (!SDL_PointInRect(&point, &rect))
+	{
+		state = State::unpressed;
 		return;
+	}
 
 	if (type == SDL_MOUSEBUTTONDOWN)
 	{
