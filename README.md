@@ -1,12 +1,12 @@
 # OctavianTest
 
 Для сборки проекта нужны библиотеки SDL http://libsdl.org/download-2.0.php (SDL2, SDL2_image, SDL2_ttf) 
-и библиотека для рвботв с json nlohmann https://github.com/nlohmann/json 
+и библиотека для работы с json - nlohmann https://github.com/nlohmann/json 
 
 ## Система виджетов
-![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Widget%20Class%20Diagramm.JPG)\
+![](https://github.com/gamedevshttl/OctavianTest/blob/master/Description/Widget%20Class%20Diagramm.JPG)
 
-SDL helpers
+SDL helpers \
 Класс Text - создает текст средствами SDL\
 Класс Texture - создает текстуру средствами SDL
 
@@ -19,9 +19,9 @@ SDL helpers
 Содержит текстуры для отображения кнопки в зависимости от состояния. (Нажата, не нажата). Так же текстура мигания.\
 Содержит callback для вызова логики.\
 \
-Класс Control. поддержка интерактивности - захват и освобождение активного виджета. Перенаправление touch вызовов к захваченному виджету.\
+Класс Control. Поддержка интерактивности - захват и освобождение активного виджета. Перенаправление touch вызовов к захваченному виджету.\
 \
-класс ResourceManager. Загрузка json и шрифтов.
+Класс ResourceManager. Загрузка json и шрифтов.
 
 ## Игровая логика
 Главный класс (GamblingMachine). Наследник виджета.\
