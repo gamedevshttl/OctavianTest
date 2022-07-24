@@ -3,7 +3,6 @@
 #include "Slot.h"
 #include "SlotDrum.h"
 
-
 Drum::Drum(Widget* parent, SDL_Renderer* gRenderer, const SDL_FPoint& pos)
 	: Widget(parent, gRenderer, position)
 {

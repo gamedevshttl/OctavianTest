@@ -19,7 +19,6 @@ public:
 		const std::vector<std::string>& lavelVector);
 
 	void update(float dt) override;
-	//void render(SDL_Renderer* gRenderer) override;
 	void start();
 	void startStop(const std::function<void()>& stopDrumCallBack);
 private:
@@ -32,7 +31,7 @@ private:
 	SDL_Rect rect;
 	std::vector<std::shared_ptr<Slot>> slotVector;
 	SDL_TimerID timerId;
-	std::shared_ptr<Slot> nearUpSlot;
+	std::shared_ptr<Slot> nearUpSlot = nullptr;
 	int controlLevel;
 	std::function<void()> stopCallBack;
 	nlohmann::json slotDrumJson;

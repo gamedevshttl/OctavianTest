@@ -24,8 +24,8 @@ private:
 	float avgFPS = 0;
 	Uint32 startTick = 0;
 	Uint32 counterFrame = 0;
-	std::shared_ptr<Label> frameRate;
-	std::shared_ptr<Drum> drum;
-	std::shared_ptr<Button> startButton;
+	std::shared_ptr<Label> frameRate = nullptr;
+	std::shared_ptr<Drum> drum = nullptr;
+	std::shared_ptr<Button> startButton = nullptr;
 };
 

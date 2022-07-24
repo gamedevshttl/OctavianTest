@@ -22,7 +22,7 @@
     "start_speed":50,
     "speed_offset":25,
     "quantity_slot":5,
-    "timer":3000,
+    "timer":2500,
     "slot_label":[
         ["X01","X11","X21"],
         ["X02","X12","X22"],

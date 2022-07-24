@@ -58,5 +58,5 @@ void GamblingMachine::calcFameRate()
 	++counterFrame;
 	avgFPS = counterFrame / (time / 1000.f);
 	if (frameRate)
-		frameRate->setText(std::to_string(avgFPS));
+		frameRate->setText("fps:" + std::to_string(static_cast<int>(avgFPS)));
 }

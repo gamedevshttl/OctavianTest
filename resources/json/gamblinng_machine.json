@@ -10,7 +10,7 @@
         "press_image":"../resources/image/press_button.png"
     },
     "frame_rate_position":{
-        "x":350,
+        "x":370,
         "y":700
     }
 }

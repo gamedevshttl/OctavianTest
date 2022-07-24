@@ -20,8 +20,6 @@ public:
 			float drumSpeed,
 			float upBorder,
 			float downBorde);
-	//Slot(float initX = 0.f, float initY = 0.f);
-	//void init(SDL_Renderer* gRenderer, float upBorder, float downBorder);
 	void render(SDL_Renderer* gRenderer) override;
 	void update(float dt);
 	void setSpeed(float speed);
