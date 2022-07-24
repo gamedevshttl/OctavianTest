@@ -10,10 +10,10 @@ public:
 	Drum(Widget* parent, SDL_Renderer* gRenderer, const SDL_FPoint& pos);
 	void render(SDL_Renderer* gRenderer) override;
 
-	void startDrum(const std::function<void()> stopDrumCallBack);
+	void start(const std::function<void()> stopDrumCallBack);
 private:
 	static Uint32 stopDrumCallBack(Uint32 interval, void* param);
-	void startStop();
+	void stop();
 	void stopDrumSlot();
 	int stopDrumId = 0;
 

@@ -40,7 +40,7 @@ GamblingMachine::GamblingMachine(Widget* parent, SDL_Renderer* gRenderer, const 
 void GamblingMachine::startDrum()
 {
 	if (drum)
-		drum->startDrum([this]() {
+		drum->start([this]() {
 			startButton->setLock(false);
 		});
 	startButton->setLock(true);

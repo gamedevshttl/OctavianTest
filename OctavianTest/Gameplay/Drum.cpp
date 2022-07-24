@@ -54,7 +54,7 @@ void Drum::render(SDL_Renderer* gRenderer)
 	SDL_RenderSetClipRect(gRenderer, nullptr);
 }
 
-void Drum::startDrum(const std::function<void()> stopDrumCallBack)
+void Drum::start(const std::function<void()> stopDrumCallBack)
 {
 	stopCallBack = stopDrumCallBack;
 	for (auto& slotDrum : slotDrumVector)
@@ -65,11 +65,11 @@ void Drum::startDrum(const std::function<void()> stopDrumCallBack)
 
 Uint32 Drum::stopDrumCallBack(Uint32 interval, void* param)
 {
-	((Drum*)param)->startStop();
+	((Drum*)param)->stop();
 	return interval;
 }
 
-void Drum::startStop()
+void Drum::stop()
 {
 	SDL_RemoveTimer(timerId);
 	stopDrumSlot();
@@ -79,7 +79,7 @@ void Drum::stopDrumSlot()
 {
 	if (stopDrumId < slotDrumVector.size())
 	{
-		slotDrumVector[stopDrumId]->startStop([this]() {
+		slotDrumVector[stopDrumId]->launchStop([this]() {
 				++stopDrumId;
 				stopDrumSlot();
 			});

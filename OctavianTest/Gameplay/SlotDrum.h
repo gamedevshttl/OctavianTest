@@ -20,11 +20,11 @@ public:
 
 	void update(float dt) override;
 	void start();
-	void startStop(const std::function<void()>& stopDrumCallBack);
+	void launchStop(const std::function<void()>& stopDrumCallBack);
 private:
 
 	static Uint32 stopDelayCallBack(Uint32 interval, void* param);
-	void startStopProcess();
+	void stopProcess();
 	void stop();
 
 	float speed;

@@ -62,7 +62,7 @@ void SlotDrum::start()
 		slot->setSpeed(speed);
 }
 
-void SlotDrum::startStop(const std::function<void()>& stopDrumCallBack)
+void SlotDrum::launchStop(const std::function<void()>& stopDrumCallBack)
 {
 	stopCallBack = stopDrumCallBack;
 	timerId = SDL_AddTimer(delayStop, &SlotDrum::stopDelayCallBack, this);
@@ -70,11 +70,11 @@ void SlotDrum::startStop(const std::function<void()>& stopDrumCallBack)
 
 Uint32 SlotDrum::stopDelayCallBack(Uint32 interval, void* param)
 {
-	((SlotDrum*)param)->startStopProcess();
+	((SlotDrum*)param)->stopProcess();
 	return interval;
 }
 
-void SlotDrum::startStopProcess()
+void SlotDrum::stopProcess()
 {
 	int distance = std::numeric_limits<int>::max();
 	for (auto& slot : slotVector)
