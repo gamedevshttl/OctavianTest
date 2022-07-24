@@ -3,13 +3,6 @@
 #include <vector>
 #include <SDL.h>
 
-
-enum class State
-{
-	none,
-	pressed
-};
-
 class Widget: public std::enable_shared_from_this<Widget>
 {
 public:
@@ -35,20 +28,4 @@ protected:
 	Widget* parent;
 	SDL_FPoint position;
 	std::vector<std::shared_ptr<Widget>> child;
-};
-
-class System
-{
-public:
-	static void setCapture(std::shared_ptr<Widget> captureWidget);
-	static void removeCapture();
-	static std::shared_ptr<Widget> getCapture();
-
-	static void setActive(std::shared_ptr<Widget> activeWidget);
-	static void resetActive();
-	static std::shared_ptr<Widget> getActive();
-
-private:
-	static std::shared_ptr<Widget> capture;
-	static std::shared_ptr<Widget> active;
 };

@@ -36,37 +36,3 @@ SDL_FPoint Widget::getPosition()
 {
 	return position;
 }
-
-
-std::shared_ptr<Widget> System::capture = nullptr;
-std::shared_ptr<Widget> System::active = nullptr;
-
-void System::setCapture(std::shared_ptr<Widget> captureWidget)
-{
-	capture = captureWidget;
-}
-
-void System::removeCapture()
-{
-	capture = nullptr;
-}
-
-std::shared_ptr<Widget> System::getCapture()
-{
-	return capture;
-}
-
-void System::setActive(std::shared_ptr<Widget> activeWidget)
-{
-	active = activeWidget;
-}
-
-void System::resetActive()
-{
-	active = nullptr;
-}
-
-std::shared_ptr<Widget> System::getActive()
-{
-	return active;
-}

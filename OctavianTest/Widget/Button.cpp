@@ -1,5 +1,6 @@
 #include "Button.h"
 #include "Texture.h"
+#include "Control.h"
 #include <cmath>
 #include <numbers>
 
@@ -11,10 +12,7 @@ Button::Button(	Widget* parent,
 				std::string_view pathPressImage,
 				const std::function<void()>& initAction)
 	: Widget(parent, gRenderer, position)
-	//, pathImage1(initPathImage1)
-	//, pathImage2(initPathImage2)
-	//, pathPressImage(initPathPressImage)
-	, state(State::none)
+	, state(State::unpressed)
 {
 	image = std::make_shared<Texture>();
 	if (image)
@@ -85,18 +83,18 @@ void Button::touch(int x, int y, Uint32 type)
 	if (type == SDL_MOUSEBUTTONDOWN)
 	{
 		state = State::pressed;
-		System::setCapture(shared_from_this());
+		Control::setCapture(shared_from_this());
 	}
 
 	if (type == SDL_MOUSEBUTTONUP)
 	{
 		if (state == State::pressed)
 		{
-			state = State::none;
+			state = State::unpressed;
 			if (action)
 				action();
 
-			System::removeCapture();
+			Control::removeCapture();
 		}
 	}
 }

@@ -91,6 +91,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\Control;.\Resource;.\Gameplay;.\Widget;.\SDLhelpers;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -144,32 +145,34 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="Drum.cpp" />
-    <ClCompile Include="GamblingMachine.cpp" />
-    <ClCompile Include="Image.cpp" />
-    <ClCompile Include="Label.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="Text.cpp" />
+    <ClCompile Include="Control\Control.cpp" />
+    <ClCompile Include="Gameplay\Drum.cpp" />
+    <ClCompile Include="Gameplay\GamblingMachine.cpp" />
+    <ClCompile Include="Gameplay\Slot.cpp" />
+    <ClCompile Include="Gameplay\SlotDrum.cpp" />
     <ClCompile Include="OctavianTest.cpp" />
-    <ClCompile Include="Slot.cpp" />
-    <ClCompile Include="SlotDrum.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Widget.cpp" />
+    <ClCompile Include="Resource\ResourceManager.cpp" />
+    <ClCompile Include="SDLhelpers\Text.cpp" />
+    <ClCompile Include="SDLhelpers\Texture.cpp" />
+    <ClCompile Include="Widget\Button.cpp" />
+    <ClCompile Include="Widget\Image.cpp" />
+    <ClCompile Include="Widget\Label.cpp" />
+    <ClCompile Include="Widget\Widget.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
-    <ClInclude Include="Button.h" />
-    <ClInclude Include="Drum.h" />
-    <ClInclude Include="GamblingMachine.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="Label.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="Slot.h" />
-    <ClInclude Include="SlotDrum.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Widget.h" />
+    <ClInclude Include="Control\Control.h" />
+    <ClInclude Include="Gameplay\Drum.h" />
+    <ClInclude Include="Gameplay\GamblingMachine.h" />
+    <ClInclude Include="Gameplay\Slot.h" />
+    <ClInclude Include="Gameplay\SlotDrum.h" />
+    <ClInclude Include="Resource\ResourceManager.h" />
+    <ClInclude Include="SDLhelpers\Text.h" />
+    <ClInclude Include="SDLhelpers\Texture.h" />
+    <ClInclude Include="Widget\Button.h" />
+    <ClInclude Include="Widget\Image.h" />
+    <ClInclude Include="Widget\Label.h" />
+    <ClInclude Include="Widget\Widget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,6 +5,12 @@
 #include <string_view>
 #include <functional>
 
+enum class State
+{
+	unpressed,
+	pressed
+};
+
 class Texture;
 class Button : public Widget
 {

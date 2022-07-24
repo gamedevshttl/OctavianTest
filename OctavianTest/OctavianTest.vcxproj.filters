@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\ui">
-      <UniqueIdentifier>{02faa3b9-9734-4ba4-9f01-408487fea303}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\ui">
-      <UniqueIdentifier>{ef450936-7ffd-498d-9f26-05561f0a2acb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\SDLhelpers">
       <UniqueIdentifier>{88b1ab7e-29d4-46b4-bea6-167258b10369}</UniqueIdentifier>
     </Filter>
@@ -31,6 +25,24 @@
     <Filter Include="Header Files\Resource">
       <UniqueIdentifier>{7ac2af0d-afb6-450d-b137-d57ab002ad49}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Widget">
+      <UniqueIdentifier>{02faa3b9-9734-4ba4-9f01-408487fea303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Gameplay">
+      <UniqueIdentifier>{430cc551-8f15-41f5-a982-797eb23aa4be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Gameplay">
+      <UniqueIdentifier>{fc095ad1-cf3f-4739-8545-ebd2b347a7ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Control">
+      <UniqueIdentifier>{e0c3f2b0-eb81-45ba-8d94-18f56a78679b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Control">
+      <UniqueIdentifier>{483dcc06-a033-4c75-8b0b-51a22b469af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Widget">
+      <UniqueIdentifier>{ef450936-7ffd-498d-9f26-05561f0a2acb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="OctavianTest.cpp">
@@ -39,76 +51,82 @@
     <ClCompile Include="Application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GamblingMachine.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Widget\Button.cpp">
+      <Filter>Source Files\Widget</Filter>
     </ClCompile>
-    <ClCompile Include="Slot.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Widget\Image.cpp">
+      <Filter>Source Files\Widget</Filter>
     </ClCompile>
-    <ClCompile Include="SlotDrum.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Widget\Label.cpp">
+      <Filter>Source Files\Widget</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
-      <Filter>Source Files\ui</Filter>
+    <ClCompile Include="Widget\Widget.cpp">
+      <Filter>Source Files\Widget</Filter>
     </ClCompile>
-    <ClCompile Include="Widget.cpp">
-      <Filter>Source Files\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="Image.cpp">
-      <Filter>Source Files\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="Label.cpp">
-      <Filter>Source Files\ui</Filter>
-    </ClCompile>
-    <ClCompile Include="Drum.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Text.cpp">
+    <ClCompile Include="SDLhelpers\Text.cpp">
       <Filter>Source Files\SDLhelpers</Filter>
     </ClCompile>
-    <ClCompile Include="Texture.cpp">
+    <ClCompile Include="SDLhelpers\Texture.cpp">
       <Filter>Source Files\SDLhelpers</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
+    <ClCompile Include="Gameplay\Drum.cpp">
+      <Filter>Source Files\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\GamblingMachine.cpp">
+      <Filter>Source Files\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\Slot.cpp">
+      <Filter>Source Files\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Gameplay\SlotDrum.cpp">
+      <Filter>Source Files\Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="Resource\ResourceManager.cpp">
       <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\Control.cpp">
+      <Filter>Source Files\Control</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GamblingMachine.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Widget\Button.h">
+      <Filter>Header Files\Widget</Filter>
     </ClInclude>
-    <ClInclude Include="Slot.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Widget\Image.h">
+      <Filter>Header Files\Widget</Filter>
     </ClInclude>
-    <ClInclude Include="SlotDrum.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Widget\Label.h">
+      <Filter>Header Files\Widget</Filter>
     </ClInclude>
-    <ClInclude Include="Button.h">
-      <Filter>Header Files\ui</Filter>
+    <ClInclude Include="Widget\Widget.h">
+      <Filter>Header Files\Widget</Filter>
     </ClInclude>
-    <ClInclude Include="Widget.h">
-      <Filter>Header Files\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="Image.h">
-      <Filter>Header Files\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="Label.h">
-      <Filter>Header Files\ui</Filter>
-    </ClInclude>
-    <ClInclude Include="Drum.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
+    <ClInclude Include="SDLhelpers\Text.h">
       <Filter>Header Files\SDLhelpers</Filter>
     </ClInclude>
-    <ClInclude Include="Text.h">
+    <ClInclude Include="SDLhelpers\Texture.h">
       <Filter>Header Files\SDLhelpers</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceManager.h">
+    <ClInclude Include="Gameplay\Drum.h">
+      <Filter>Header Files\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\GamblingMachine.h">
+      <Filter>Header Files\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\Slot.h">
+      <Filter>Header Files\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Gameplay\SlotDrum.h">
+      <Filter>Header Files\Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource\ResourceManager.h">
       <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\Control.h">
+      <Filter>Header Files\Control</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@ public:
 	static void loadfont(std::string_view name, std::string_view path, int size);
 	static TTF_Font* getFont(std::string_view name);
 	static void closeFont();
+private:
 	static std::map<std::string, TTF_Font* > fonts;
 };
 

@@ -4,9 +4,11 @@
 #include <chrono>
 #include "GamblingMachine.h"
 #include "ResourceManager.h"
+#include "Control.h"
 
 bool Application::init()
 {
+	nlohmann::json mainWindowJson = ResourceManager::loadJson("../resources/json/main_window.json");
 	if (SDL_Init(SDL_INIT_VIDEO) < 0)
 	{
 		std::cout << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
@@ -14,8 +16,8 @@ bool Application::init()
 	}
 	else
 	{
-		int windowWidth = 850;
-		int windowHeight = 768;
+		int windowWidth = mainWindowJson["width"].get<int>();
+		int windowHeight = mainWindowJson["height"].get<int>();
 
 		//Create window
 		gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowWidth, windowHeight, SDL_WINDOW_SHOWN);
@@ -54,10 +56,10 @@ bool Application::init()
 		}
 	}
 
-	ResourceManager::loadfont("lazy", "../resources/font/lazy.ttf", 28);
+	ResourceManager::loadfont("lazy", "../resources/font/lazy.ttf", mainWindowJson["font_size"].get<int>());
 
 	gamblingMachine = std::make_shared<GamblingMachine>(nullptr, gRenderer, SDL_FPoint());
-	System::setActive(gamblingMachine);
+	Control::setActive(gamblingMachine);
 	return true;
 }
 
@@ -82,9 +84,9 @@ void Application::run()
 				int touchX, touchY;
 				SDL_GetMouseState(&touchX, &touchY);
 
-				if (System::getCapture())
+				if (Control::getCapture())
 				{
-					System::getCapture()->touch(touchX, touchY, event.type);
+					Control::getCapture()->touch(touchX, touchY, event.type);
 				}
 				else
 				{
@@ -93,7 +95,7 @@ void Application::run()
 				}
 
 				if (event.type == SDL_MOUSEBUTTONUP)
-					System::removeCapture();
+					Control::removeCapture();
 			}
 		}
 
